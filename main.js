@@ -2,7 +2,7 @@
 
 console.log("Hola");
 
-setTimeout(() => console.log("Chau"), 1000);
+setTimeout(() => console.log("Chau"), 6000);
 
 
 
