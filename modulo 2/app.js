@@ -1,4 +1,4 @@
-import { GetTabla, CrearArchivoAsync, LeerArchivoAsync } from "./Utils.js";
+const { GetTabla, CrearArchivoAsync, LeerArchivoAsync } = require("./Utils.js");
 
 const tablaDel5 = GetTabla(5);
 
