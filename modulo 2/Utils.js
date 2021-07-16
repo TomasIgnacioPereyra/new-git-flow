@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('fs').promises;
 
 
 const GetTabla = (num = 0) => {
@@ -24,18 +24,27 @@ function ValidarNumero(numero) {
 }
 const fileName = "tabla.txt";
 
-const CrearArchivo = async (texto = "") => {
-    fs.writeFile(fileName, texto, (err) => {
-        if (err)
-            console.log(err);
-        else {
-            console.log(fs.readFileSync(fileName, "utf8"));
-        }
-    });
+const CrearArchivoAsync = async (texto = "") => {
+    try {
+        await fs.writeFile(fileName, texto);
+    }
+    catch (error) {
+        console.error(error);
+        throw error;
+    }
 };
-
+const LeerArchivoAsync = async () => {
+    try {
+        return await fs.readFile(fileName, "utf8");
+    }
+    catch (error) {
+        console.error(error);
+        throw error;
+    }
+};
 
 module.exports = {
     GetTabla,
-    CrearArchivo
+    CrearArchivoAsync,
+    LeerArchivoAsync
 }
