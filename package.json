@@ -1,0 +1,23 @@
+{
+  "name": "ejercicios_node",
+  "version": "1.0.0",
+  "description": "Ejercicios y tareas curso node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon app --base=9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomasIgnacioPereyra/new-git-flow.git"
+  },
+  "author": "Tomas Pereyra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomasIgnacioPereyra/new-git-flow/issues"
+  },
+  "homepage": "https://github.com/TomasIgnacioPereyra/new-git-flow#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
