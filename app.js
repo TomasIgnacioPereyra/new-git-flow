@@ -13,3 +13,8 @@ tarea5();*/
 const tarea6 = require("./modulo 2/Tarea 6/app.js");
 tarea6();
 */
+
+/*
+const tarea9 = require("./modulo 2/Tarea 9/app.js");
+tarea9();
+*/
