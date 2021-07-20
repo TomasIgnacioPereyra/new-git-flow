@@ -1,3 +1,5 @@
+const fs = require('fs').promises;
+
 const GetTabla = (num = 0) => {
 
     ValidarNumero(num);
@@ -19,7 +21,19 @@ function ValidarNumero(numero) {
         throw new Error("La funcion espera un numero")
     }
 }
+let fileName = "tabla-x.txt";
+const CrearArchivoAsync = (texto = "") => {
+    return fs.writeFile(fileName, texto);
+};
+const GenerarTabla = (num=0) => {
 
+    const tabla = GetTabla(num);
+    fileName = fileName.replace("x", num);
+    CrearArchivoAsync(tabla);
+
+    return tabla;
+};
 module.exports = {
-    GetTabla
+    GetTabla,
+    GenerarTabla
 };

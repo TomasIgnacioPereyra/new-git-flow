@@ -1,6 +1,6 @@
 console.clear();
 
-const { GetTabla } = require("../Funciones/common.js")
+const { GenerarTabla } = require("../Funciones/common.js")
 console.log("Inicion tarea 7")
 
 const argv = require('yargs')
@@ -14,18 +14,18 @@ const argv = require('yargs')
         demandOption: false,
         default: false
     }).check((argv, options) => {
-        const { listar,base } = argv;
-        
+        const { listar, base } = argv;
+
         if (isNaN(base)) {
             throw "La base tiene que ser un numero";
         }
         else if (base < 1 || base > 20) {
             throw "Debes colocar un valor de base entre 1 y 20";
-        }else{
-            if (listar) {
-                const tabla = GetTabla(base);
+        } else {
+            const tabla = GenerarTabla(base);
+            if (listar)
                 console.log(tabla);
-            }
+
         }
         return true;
     }).argv;

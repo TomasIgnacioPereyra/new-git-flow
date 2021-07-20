@@ -1,5 +1,5 @@
 const colors = require('colors');
-const { GetTabla } = require("../Funciones/common.js");
+const { GenerarTabla } = require("../Funciones/common.js");
 
 console.clear();
 
@@ -15,7 +15,7 @@ console.log(`
 ====================================
 `);
 
-const tabla = GetTabla(num).trap.random;
+const tabla = GenerarTabla(num).trap.random;
 console.log(tabla);
 
 

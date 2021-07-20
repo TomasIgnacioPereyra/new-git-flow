@@ -1,4 +1,4 @@
-const { GetTabla } = require("../../Funciones/common.js")
+const { GenerarTabla } = require("../../Funciones/common.js")
 console.log("Inicion tarea 8")
 const argv = require('yargs')
     .option("b", {
@@ -21,10 +21,11 @@ const argv = require('yargs')
         else if (base < 1 || base > 20) {
             throw "Debes colocar un valor de base entre 1 y 20";
         }else{
-            if (listar) {
-                const tabla = GetTabla(base);
+            const tabla = GenerarTabla(base);
+
+            if (listar) 
                 console.log(tabla);
-            }
+            
         }
         return true;
     }).argv;
