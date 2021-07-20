@@ -22,8 +22,8 @@ function ValidarNumero(numero) {
     }
 }
 let fileName = "tabla-x.txt";
-const CrearArchivoAsync = (texto = "") => {
-    return fs.writeFile(fileName, texto);
+const CrearArchivoAsync = (texto = "",filename="") => {
+    return fs.writeFile(filename || fileName, texto);
 };
 const GenerarTabla = (num=0) => {
 
@@ -35,5 +35,6 @@ const GenerarTabla = (num=0) => {
 };
 module.exports = {
     GetTabla,
-    GenerarTabla
+    GenerarTabla,
+    CrearArchivoAsync
 };
