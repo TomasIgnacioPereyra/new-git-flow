@@ -4,7 +4,7 @@
   "description": "Ejercicios y tareas curso node",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon app --base=9"
   },
   "repository": {
@@ -21,6 +21,7 @@
     "eslint": "^7.31.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.4",
+    "jest": "^27.0.6",
     "nodemon": "^2.0.12"
   },
   "dependencies": {
